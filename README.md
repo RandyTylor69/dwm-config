@@ -1,0 +1,6 @@
+### Keybinds
+
+```shell
+MOD + Return       #spawn
+MOD + Q            #kill
+```
