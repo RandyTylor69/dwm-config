@@ -32,10 +32,11 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "code",  NULL,       NULL,       1 << 0,       0,           -1 },
-	{ "firefox",  NULL,       NULL,       1 << 1,       0,           -1 },
-	{ "obsidian",  NULL,       NULL,       1 << 2,       0,           -1 },
+	/* class      instance    title       tags mask     isfloating  center?   monitor */
+	{ "st",       NULL,       NULL,       0,            0,     	     1,		-1 },
+	{ "code",     NULL,       NULL,       1 << 0,       0,           0,     -1 },
+	{ "firefox",  NULL,       NULL,       1 << 1,       0,           0,     -1 },
+	{ "obsidian", NULL,       NULL,       1 << 2,       0,           0,     -1 },
 };
 
 /* layout(s) */
@@ -101,6 +102,8 @@ static const Key keys[] = {
 	{ 0, 							XF86XK_AudioMute, spawn, {.v = mutecmd } },
 	{ 0, 							XF86XK_AudioLowerVolume, spawn, {.v = voldowncmd } },
 	{ 0, 							XF86XK_AudioRaiseVolume, spawn, {.v = volupcmd } },
+	// Screenshot with scrot:
+	{ MODKEY|ShiftMask, 			XK_s,spawn,                SHCMD("scrot > ~/Pictures/Screenshots/newscreenshot.jpg") },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
