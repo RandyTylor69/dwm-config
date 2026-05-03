@@ -103,7 +103,7 @@ static const Key keys[] = {
 	{ 0, 							XF86XK_AudioLowerVolume, spawn, {.v = voldowncmd } },
 	{ 0, 							XF86XK_AudioRaiseVolume, spawn, {.v = volupcmd } },
 	// Screenshot with scrot:
-	{ MODKEY|ShiftMask, 			XK_s,spawn,                SHCMD("scrot > ~/Pictures/Screenshots/newscreenshot.jpg") },
+	{ MODKEY|ShiftMask, 			XK_s,spawn,                SHCMD("scrot ~/Pictures/Screenshots/newscreenshot.jpg") },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
